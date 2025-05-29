@@ -1,9 +1,9 @@
 import * as Linking from "expo-linking";
 import { openAuthSessionAsync } from "expo-web-browser";
+import { Platform } from "react-native";
 import { Account, Avatars, Client, OAuthProvider } from "react-native-appwrite";
 
 export const config = {
-    platform: 'com.jsm.emlakapp',
     endpoint: process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT,
     project: process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID,
 }
@@ -13,7 +13,15 @@ export const client = new Client();
 client
     .setEndpoint(config.endpoint!)
     .setProject(config.project!)
-    .setPlatform(config.platform!)
+
+switch (Platform.OS) {
+    case 'ios':
+        client.setPlatform("com.dennis.emlakapp");
+        break;
+    case 'android':
+        client.setPlatform("com.jsm.emlakapp");
+        break;
+}
 
 export const avatar = new Avatars(client);
 export const account = new Account(client);
@@ -67,7 +75,7 @@ export async function getCurrentUser() {
             }
         }
 
-        return response;
+        return null;
     } catch (error) {
         console.error("Failed to get the response:", error);
         return null;

@@ -14,8 +14,6 @@ const SignIn = () => {
 		//} else {
 		//	console.error('Login failed');
 		//}
-		//bu satiri actigimda kod patliyor appwrite ile ilgili bir sorun var
-		// saat 1
 	};
 
 	return (

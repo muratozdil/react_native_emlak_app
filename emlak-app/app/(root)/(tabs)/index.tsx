@@ -1,4 +1,3 @@
-import { Link } from 'expo-router';
 import React from 'react';
 import { Text, View } from 'react-native';
 
@@ -14,10 +13,6 @@ export default function Index() {
 			<Text className="font-bold text-lg my-10 font-rubik text-3xl">
 				Welcome to my app
 			</Text>
-			<Link href="/sign-in">sign in</Link>
-			<Link href="/explore">explore page</Link>
-			<Link href="/profile">profile page</Link>
-			<Link href="/properties/1">Property</Link>
 		</View>
 	);
 }

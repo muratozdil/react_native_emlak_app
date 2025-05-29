@@ -1,11 +1,12 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { SafeAreaView, Text } from 'react-native';
 
 const Profile = () => {
+	const handleLogout = async () => {};
 	return (
-		<View>
+		<SafeAreaView>
 			<Text>Profile Page</Text>
-		</View>
+		</SafeAreaView>
 	);
 };
 
