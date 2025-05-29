@@ -1,27 +1,19 @@
 import * as Linking from "expo-linking";
 import { openAuthSessionAsync } from "expo-web-browser";
-import { Platform } from "react-native";
 import { Account, Avatars, Client, OAuthProvider } from "react-native-appwrite";
 
 export const config = {
-    endpoint: process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT,
-    project: process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID,
+    platform: 'com.akurcorp.emlakapp',
+    project: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID,
+    endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT,
 }
 
 export const client = new Client();
 
 client
     .setEndpoint(config.endpoint!)
-    .setProject(config.project!)
+    .setProject(config.project!);
 
-switch (Platform.OS) {
-    case 'ios':
-        client.setPlatform("com.dennis.emlakapp");
-        break;
-    case 'android':
-        client.setPlatform("com.jsm.emlakapp");
-        break;
-}
 
 export const avatar = new Avatars(client);
 export const account = new Account(client);

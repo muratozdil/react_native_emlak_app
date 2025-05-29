@@ -1,19 +1,34 @@
 //import { login } from '@/lib/appwrite';
+import { useGlobalContext } from '@/lib/global-provider';
 import React from 'react';
-import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import {
+	Alert,
+	Image,
+	ScrollView,
+	Text,
+	TouchableOpacity,
+	View,
+} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import icons from '@/constants/icons';
 import images from '@/constants/images';
+import { login } from '@/lib/appwrite';
+import { Redirect } from 'expo-router';
 
 const SignIn = () => {
+	const { refetch, loading, isLoggedIn } = useGlobalContext();
+
+	if (!loading && isLoggedIn) return <Redirect href="/" />;
+
 	const handleLogin = async () => {
-		//const result = await login();
-		//if (result) {
-		//	console.log('Login successful:', result);
-		//} else {
-		//	console.error('Login failed');
-		//}
+		const result = await login();
+		if (result) {
+			refetch();
+			console.log('Login successful:', result);
+		} else {
+			Alert.alert('Login failed');
+		}
 	};
 
 	return (
@@ -25,7 +40,7 @@ const SignIn = () => {
 				/>
 				<View className="px-10">
 					<Text className="text-base text-center uppercase font-rubik text-black-200">
-						Welcome to my app
+						Welcome to EmlakApp
 					</Text>
 					<Text className="text-3xl text-center font-rubik-bold text-black-200 mt-2">
 						Choose to live in your{'\n'}

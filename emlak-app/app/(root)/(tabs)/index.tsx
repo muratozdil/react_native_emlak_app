@@ -11,7 +11,7 @@ export default function Index() {
 			}}
 		>
 			<Text className="font-bold text-lg my-10 font-rubik text-3xl">
-				Welcome to my app
+				Welcome to EmlakApp
 			</Text>
 		</View>
 	);
