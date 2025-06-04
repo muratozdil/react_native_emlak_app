@@ -1,4 +1,3 @@
-//import { login } from '@/lib/appwrite';
 import { useGlobalContext } from '@/lib/global-provider';
 import React from 'react';
 import {
@@ -17,9 +16,9 @@ import { login } from '@/lib/appwrite';
 import { Redirect } from 'expo-router';
 
 const SignIn = () => {
-	const { refetch, loading, isLoggedIn } = useGlobalContext();
+	const { refetch, loading, isLogged } = useGlobalContext();
 
-	if (!loading && isLoggedIn) return <Redirect href="/" />;
+	if (!loading && isLogged) return <Redirect href="/" />;
 
 	const handleLogin = async () => {
 		const result = await login();
@@ -27,7 +26,7 @@ const SignIn = () => {
 			refetch();
 			console.log('Login successful:', result);
 		} else {
-			Alert.alert('Login failed');
+			Alert.alert('Error', 'Login failed');
 		}
 	};
 
