@@ -6,9 +6,11 @@ export default function AppLayout() {
 	const { isLogged, loading } = useGlobalContext();
 
 	if (loading) {
-		<SafeAreaView className="bg-white h-full flex items-center justify-center">
-			<ActivityIndicator className="text-primary-300" size="large" />
-		</SafeAreaView>;
+		return (
+			<SafeAreaView className="bg-white h-full flex items-center justify-center">
+				<ActivityIndicator className="text-primary-300" size="large" />
+			</SafeAreaView>
+		);
 	}
 	if (!isLogged) return <Redirect href="/sign-in" />;
 
