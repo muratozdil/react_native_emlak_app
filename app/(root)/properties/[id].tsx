@@ -53,7 +53,7 @@ const Property = () => {
 					<View
 						className="z-50 absolute inset-x-7"
 						style={{
-							top: Platform.OS === 'ios' ? 70 : 20,
+							top: 50,
 						}}
 					>
 						<View className="flex flex-row items-center w-full justify-between">

@@ -1,55 +1,62 @@
 {
-	"expo": {
-		"android": {
-			"adaptiveIcon": {
-				"backgroundColor": "#ffffff",
-				"foregroundImage": "./assets/images/icon.png"
-			},
-			"edgeToEdgeEnabled": true
-		},
-		"experiments": {
-			"typedRoutes": true
-		},
-		"icon": "./assets/images/icon.png",
-		"ios": {
-			"supportsTablet": true
-		},
-		"name": "emlak-app",
-		"newArchEnabled": true,
-		"orientation": "portrait",
-		"plugins": [
-			"expo-router",
-			[
-				"expo-splash-screen",
-				{
-					"backgroundColor": "#ffffff",
-					"enableFullScreenImage_legacy": true,
-					"image": "./assets/images/splash-icon.png",
-					"resizeMode": "cover"
-				}
-			],
-			[
-				"expo-font",
-				{
-					"fonts": [
-						"./assets/fonts/Rubik-Bold.ttf",
-						"./assets/fonts/Rubik-ExtraBold.ttf",
-						"./assets/fonts/Rubik-Medium.ttf",
-						"./assets/fonts/Rubik-Light.ttf",
-						"./assets/fonts/Rubik-Regular.ttf",
-						"./assets/fonts/Rubik-SemiBold.ttf"
-					]
-				}
-			]
-		],
-		"scheme": "emlakapp",
-		"slug": "emlak-app",
-		"userInterfaceStyle": "automatic",
-		"version": "1.0.0",
-		"web": {
-			"bundler": "metro",
-			"favicon": "./assets/images/favicon.png",
-			"output": "static"
-		}
-	}
+  "expo": {
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff",
+        "foregroundImage": "./assets/images/icon.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.akurti.emlakapp"
+    },
+    "experiments": {
+      "typedRoutes": true
+    },
+    "icon": "./assets/images/icon.png",
+    "ios": {
+      "supportsTablet": true
+    },
+    "name": "emlak-app",
+    "newArchEnabled": true,
+    "orientation": "portrait",
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#ffffff",
+          "enableFullScreenImage_legacy": true,
+          "image": "./assets/images/splash-icon.png",
+          "resizeMode": "cover"
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Rubik-Bold.ttf",
+            "./assets/fonts/Rubik-ExtraBold.ttf",
+            "./assets/fonts/Rubik-Medium.ttf",
+            "./assets/fonts/Rubik-Light.ttf",
+            "./assets/fonts/Rubik-Regular.ttf",
+            "./assets/fonts/Rubik-SemiBold.ttf"
+          ]
+        }
+      ]
+    ],
+    "scheme": "emlakapp",
+    "slug": "emlak-app",
+    "userInterfaceStyle": "automatic",
+    "version": "1.0.0",
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/images/favicon.png",
+      "output": "static"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "ba958392-faa7-4103-b93d-7f07cad3e03b"
+      }
+    }
+  }
 }
