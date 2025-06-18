@@ -15,6 +15,7 @@ import {
 	Text,
 	TouchableOpacity,
 	View,
+	Platform,
 } from 'react-native';
 
 export default function Index() {
@@ -49,7 +50,10 @@ export default function Index() {
 	}, [params.filter, params.query]);
 
 	return (
-		<SafeAreaView className="h-full bg-white">
+		<SafeAreaView
+			className="h-full bg-white "
+			style={{ paddingTop: Platform.OS === 'android' ? 25 : 0 }}
+		>
 			{/*<Button title="Seed" onPress={() => seed()} />*/}
 			<FlatList
 				data={properties}
