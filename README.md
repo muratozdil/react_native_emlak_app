@@ -1,6 +1,10 @@
-# Welcome to my Emlakapp app 👋
+# Welcome to my Emlakapp👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+
+# Detailed Info About my Project 
+[`Video`](https://youtu.be/gNLbUQCZmO0).
+[`Documatation`](https://drive.google.com/file/d/1a79dc3QgJQ3RWbCYGk0t4Kz0tRF8toCF/view?usp=sharing).
 
 ## Get started
 
@@ -36,3 +40,39 @@ In the output, you'll find options to open the app in a
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
 For the best experience, stick to a IOS device or emulator
+
+## Project Directory
+
+1. App/
+   1. (root)/tabs/
+      Alt sekmeli navigasyon yapısı burada tanımlanır.
+      • index.tsx: Ana sayfa
+      • explore.tsx: Keşfet sayfası
+      • profile.tsx: Profil ekranı
+      • _layout.tsx: Bu klasördeki sayfalar için layout yönetimi yapılır.
+   2. properities/
+      Emlak ilanı detayları gibi dinamik sayfaları barındırır.
+      • [id].tsx: Belirli bir ilanın detay sayfası
+      • _layout.tsx: Tüm properties/ sayfalarına ortak yapı sağlar.
+   3. sign-in.tsx: Google OAuth giriş ekranı
+   4. _layout.tsx: Tüm uygulama genelinde kullanılan ana layout dosyası
+   5. globals.css: Uygulamanın genel stil ayarlarını içerir
+2. Assets/
+   1. fonts/: Özel font dosyaları
+   2. icons/: SVG veya PNG ikonlar
+   3. images/: Uygulama görselleri
+
+3. Components/
+   1. cards.tsx: İlan kartlarını temsil eder
+   2. comment.tsx: Kullanıcı yorumları bileşeni
+   3. filters.tsx: Arama filtre bileşeni
+   4. noResults.tsx: Sonuç bulunamadığında gösterilen ekran
+  
+## Unfinished Parts/Feature Updates
+
+1. android fix
+2. like/save function
+3. change profile details
+4. add real estate details
+5. comment and review
+6. booking system (callender + billing for chosen days)
